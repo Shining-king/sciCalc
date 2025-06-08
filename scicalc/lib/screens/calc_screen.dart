@@ -1,13 +1,31 @@
 import 'package:flutter/material.dart';
 
-class FirstScreen extends StatelessWidget {
-  const FirstScreen({Key? key}) : super(key: key);
+class calcScreen extends StatelessWidget {
+  const calcScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('First Screen')),
-      body: Center(child: Text('This is the first screen')),
+      backgroundColor: Colors.yellow.shade700,
+      appBar: AppBar(
+        title: Text('SciCalc'),
+        backgroundColor: Colors.yellow.shade700,
+      ),
+      body: Column(
+        children: [
+          Padding(
+            padding: EdgeInsets.all(14),
+            child: Container(
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: Colors.yellow.shade100,
+                borderRadius: BorderRadius.circular(50.0),
+              ),
+              padding: EdgeInsets.symmetric(horizontal: 50, vertical: 100),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
