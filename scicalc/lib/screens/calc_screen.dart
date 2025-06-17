@@ -10,7 +10,7 @@ class calcScreen extends StatefulWidget {
 class _calcScreenState extends State<calcScreen> {
   Widget _button(String text, VoidCallback onPressed) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(12.0),
       child: Expanded(
         child: ElevatedButton(onPressed: onPressed, child: Text(text)),
       ),
@@ -39,12 +39,32 @@ class _calcScreenState extends State<calcScreen> {
                   ),
                   padding: EdgeInsets.symmetric(horizontal: 50, vertical: 100),
                 ),
-                Row(
+                Column(
                   children: [
-                    _button('7', () {}),
-                    _button('8', () {}),
-                    _button('9', () {}),
-                    _button('/', () {}),
+                    Row(
+                      children: [
+                        _button('7', () {}),
+                        _button('8', () {}),
+                        _button('9', () {}),
+                        _button('/', () {}),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        _button('7', () {}),
+                        _button('8', () {}),
+                        _button('9', () {}),
+                        _button('/', () {}),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        _button('7', () {}),
+                        _button('8', () {}),
+                        _button('9', () {}),
+                        _button('/', () {}),
+                      ],
+                    ),
                   ],
                 ),
               ],
