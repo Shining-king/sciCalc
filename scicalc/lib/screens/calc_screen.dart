@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-class calcScreen extends StatefulWidget {
-  const calcScreen({Key? key}) : super(key: key);
+class CalcScreen extends StatefulWidget {
+  const CalcScreen({Key? key}) : super(key: key);
 
   @override
-  State<calcScreen> createState() => _calcScreenState();
+  State<CalcScreen> createState() => _CalcScreenState();
 }
 
-class _calcScreenState extends State<calcScreen> {
+class _CalcScreenState extends State<CalcScreen> {
   Widget _button(String text, VoidCallback onPressed) {
     return Padding(
-      padding: const EdgeInsets.all(12.0),
+      padding: const EdgeInsets.symmetric(horizontal: 4.0),
       child: Expanded(
         child: ElevatedButton(onPressed: onPressed, child: Text(text)),
       ),
@@ -59,10 +59,18 @@ class _calcScreenState extends State<calcScreen> {
                     ),
                     Row(
                       children: [
-                        _button('7', () {}),
-                        _button('8', () {}),
-                        _button('9', () {}),
-                        _button('/', () {}),
+                        _button('1', () {}),
+                        _button('2', () {}),
+                        _button('3', () {}),
+                        _button('-', () {}),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        _button('', () {}),
+                        _button('0', () {}),
+                        _button('', () {}),
+                        _button('+', () {}),
                       ],
                     ),
                   ],
